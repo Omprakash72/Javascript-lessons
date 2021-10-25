@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-1</title>
+</head>
+<body>
+    <h1>Today we will learn to calculate the area of a circle</h1>
+    <p>We know the formula is</p>
+    <pre>             area = 2*(pi)*r
+
+         where <b>pi</b> = 3.14
+                <b>r</b> = radius of the given circle
+    </pre>
+    <form>
+        <input type="text" id="number" placeholder="enter the radius">
+        <input type="submit" id="submit"><br>
+    </form>
+     <h1 id="ans"> </h1>
+    <script>
+        function area(){
+            let pi = 3.14;
+            let r = document.querySelector('#number').value;
+            document.querySelector('#ans').innerHTML = "The ans is:  " + 2*pi*r;
+            return false;
+        }
+        document.addEventListener('DOMContentLoaded',function() {
+        document.querySelector('form').onsubmit = area;
+        })
+    </script>
+</body>
+</html>
